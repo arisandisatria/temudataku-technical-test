@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalog</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <style type="text/tailwindcss">
       @theme {
         --primary: #25784c;
@@ -17,7 +17,7 @@
   <body class="scrollbar bg-gray-100">
     <header class="flex justify-around items-center">
       <img
-        src="../assets/logo.webp"
+        src="assets/logo.webp"
         alt="Logo TemuDataku"
         class="w-20 px-2 lg:px-0 lg:w-40"
       />
@@ -26,7 +26,7 @@
         <ul class="flex gap-10 font-semibold uppercase text-lg">
           <li>
             <a
-              href="homePage.html"
+              href="index.html"
               class="cursor-pointer hover:underline underline-offset-4"
               >Home</a
             >
@@ -537,7 +537,7 @@
 
       logoutButton.addEventListener("click", () => {
         localStorage.removeItem("userData");
-        location.replace("homePage.html");
+        location.replace("index.html");
       });
     </script>
   </body>
