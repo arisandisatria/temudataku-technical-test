@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --primary: #25784c;
+      }
+    </style>
+  </head>
+
+  <!-- 3. Katalog produk TemuDataku (hanya bisa diakses setelah login). -->
+  <body class="scrollbar bg-gray-100">
+    <header class="flex justify-around items-center">
+      <img
+        src="../assets/logo.webp"
+        alt="Logo TemuDataku"
+        class="w-20 px-2 lg:px-0 lg:w-40"
+      />
+
+      <nav class="hidden lg:block">
+        <ul class="flex gap-10 font-semibold uppercase text-lg">
+          <li>
+            <a
+              href="homePage.html"
+              class="cursor-pointer hover:underline underline-offset-4"
+              >Home</a
+            >
+          </li>
+          <li
+            class="cursor-pointer underline underline-(--primary) underline-offset-4 text-(--primary)"
+          >
+            <a href="catalogPage.html" class="cursor-pointer">Katalog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        id="logout-button"
+        class="px-2 py-2 lg:px-5 lg:py-3 bg-red-600 uppercase font-semibold rounded-sm lg:rounded-md text-xs lg:text-lg text-white cursor-pointer hover:opacity-80 transition-all duration-200"
+      >
+        LOGOUT
+      </button>
+    </header>
+
+    <main>
+      <section
+        class="relative flex flex-col justify-center items-center h-70 lg:h-140 w-full bg-[url(../assets/katalog-img.jpg)] bg-cover bg-center text-white"
+      >
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-black opacity-65 z-10"
+        ></div>
+
+        <h1
+          class="relative w-[80%] lg:w-[60%] font-semibold text-xl lg:text-5xl text-center z-20"
+        >
+          Mentoring, Practice, dan Bootcamp hanya di
+          <span
+            class="text-4xl lg:text-7xl font-bold [-webkit-text-stroke:2px_#25784c] lg:[-webkit-text-stroke:3.5px_#25784c]"
+            >TemuDataku!</span
+          >
+        </h1>
+        <p
+          class="relative z-20 text-center mx-10 mt-4 lg:mt-8 text-xs lg:text-lg"
+        >
+          Dapatkan promo khusus pada hari-hari besar. Jangan pernah lewatkan
+          kesempatan ini!
+        </p>
+      </section>
+
+      <section class="mx-6 mt-4 lg:mx-30 lg:mt-20">
+        <h2 class="text-3xl lg:text-4xl font-bold">Mentoring</h2>
+        <div class="flex gap-5 mt-3 lg:mt-6 overflow-x-auto scrollbar-none">
+          <div
+            class="flex flex-col justify-between w-50 h-65 lg:w-100 lg:h-115 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Mentoring 1 on 1
+              </h4>
+              <p class="font-bold text-3xl lg:text-5xl my-1 lg:my-4">
+                Rp49.000
+              </p>
+            </div>
+
+            <ul
+              class="flex flex-col gap-1 lg:gap-2 text-xs lg:text-base text-balance list-inside"
+            >
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Mentoring 45 menit
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Tanya apapun permasalahan dalam bidang data science
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Rekaman sesi mentoring
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Garansi kepuasan*
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Dapatkan akses ke praktik data science**
+              </li>
+            </ul>
+
+            <div
+              class="bg-(--primary) py-1.5 lg:py-3 px-2 lg:px-4 mt-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Pilih Paket
+              </h2>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between w-50 h-65 lg:w-100 lg:h-115 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Mentoring Group
+              </h4>
+              <p class="font-bold text-3xl lg:text-5xl my-1 lg:my-4">
+                Rp159.000
+              </p>
+            </div>
+
+            <ul
+              class="flex flex-col gap-1 lg:gap-2 text-xs lg:text-base text-balance list-inside"
+            >
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Mentoring 90 menit
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Tanya apapun permasalahan dalam bidang data science
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Rekaman sesi mentoring
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Garansi kepuasan*
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Dapatkan akses ke praktik data science**
+              </li>
+            </ul>
+
+            <div
+              class="bg-(--primary) py-1.5 lg:py-3 px-2 lg:px-4 mt-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Pilih Paket
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="ml-1 lg:ml-3 mt-1 lg:mt-2 italic">
+          <p class="text-[8px] lg:text-xs">
+            * Garansi kepuasan bisa didapatkan jika pseserta tidak puas dan
+            mengisi form untuk melakukan klaim garansi serta memberikan bukti
+            valid.
+          </p>
+          <p class="text-[8px] lg:text-xs">
+            ** Untuk peserta yang pertama kali mengikuti mentoring akan
+            mendapatkan akses ke praktik data science.
+          </p>
+        </div>
+      </section>
+
+      <section class="mx-6 my-4 lg:mx-30 lg:my-20">
+        <h2 class="text-3xl lg:text-4xl font-bold">Practice</h2>
+        <div
+          class="lg:grid lg:grid-cols-4 flex gap-3 mt-3 lg:mt-6 overflow-x-auto scrollbar-none"
+        >
+          <div
+            class="flex flex-col justify-between min-w-50 h-60 lg:w-100 lg:h-85 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Data Analyst
+              </h4>
+              <p class="font-bold text-2xl lg:text-4xl lg:my-4">
+                Customer Analysis
+              </p>
+            </div>
+
+            <p class="text-[10px] mb-2 lg:text-base">
+              Kamu akan belajar cara menganalisis pelanggan, mencari trend yang
+              tersembunyi, dan bagaimana prospek pelanggan kedepannya.
+            </p>
+
+            <div
+              class="bg-(--primary) py-1 px-1.5 lg:py-3 lg:px-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Ambil Kelas
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between min-w-50 h-60 lg:w-100 lg:h-85 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Data Scientist
+              </h4>
+              <p class="font-bold text-2xl lg:text-4xl lg:my-4">
+                Churn Prediction
+              </p>
+            </div>
+
+            <p class="text-[10px] mb-2 lg:text-base">
+              Kamu akan belajar mulai dari membersihkan data dan membuat model
+              untuk memprediksi kemungkinan pelanggan melakukan churn.
+            </p>
+
+            <div
+              class="bg-(--primary) py-1 px-1.5 lg:py-3 lg:px-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Ambil Kelas
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between min-w-50 h-60 lg:w-100 lg:h-85 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Machine Learning
+              </h4>
+              <p class="font-bold text-2xl lg:text-4xl lg:my-4">NLP</p>
+            </div>
+
+            <p class="text-[10px] mb-2 lg:text-base">
+              Kamu akan belajar bagaimana cara mengolah teks, menganalisis
+              sentiment, dan juga klasifikasi teks seperti spam detection dan
+              sejenisnya.
+            </p>
+
+            <div
+              class="bg-(--primary) py-1 px-1.5 lg:py-3 lg:px-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Ambil Kelas
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between min-w-50 h-60 lg:w-100 lg:h-85 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Machine Learning
+              </h4>
+              <p class="font-bold text-2xl lg:text-4xl lg:my-4">
+                Classification
+              </p>
+            </div>
+
+            <p class="text-[10px] mb-2 lg:text-base">
+              Kamu akan belajar mulai dari pemrosesan data seperti feature
+              enginering, encoding, dan labelling. Kamu juga akan menggunakan
+              package untuk melakukan pemodelan klasifikasi.
+            </p>
+
+            <div
+              class="bg-(--primary) py-1 px-1.5 lg:py-3 lg:px-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Ambil Kelas
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between min-w-50 h-60 lg:w-100 lg:h-85 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Machine Learning
+              </h4>
+              <p class="font-bold text-2xl lg:text-4xl lg:my-4">
+                Computer Vision
+              </p>
+            </div>
+
+            <p class="text-[10px] mb-2 lg:text-base">
+              Kamu akan belajar bagaimana mengolah gaambar dan membuat
+              klasifikasi dari dataset yang disedikanan.
+            </p>
+
+            <div
+              class="bg-(--primary) py-1 px-1.5 lg:py-3 lg:px-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Ambil Kelas
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between min-w-50 h-60 lg:w-100 lg:h-85 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Machine Learning
+              </h4>
+              <p class="font-bold text-2xl lg:text-4xl lg:my-4">Time Series</p>
+            </div>
+
+            <p class="text-[10px] mb-2 lg:text-base">
+              Kamu akan belajar pemrosesan data untuk tipe data time series
+              serta pembuatan model model time series dari klasik hingga
+              penggunaan neural network untuk time series.
+            </p>
+
+            <div
+              class="bg-(--primary) py-1 px-1.5 lg:py-3 lg:px-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Ambil Kelas
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-6 mb-4 lg:mx-30 lg:mb-20">
+        <h2 class="text-3xl lg:text-4xl font-bold">Bootcamp</h2>
+        <div class="flex gap-5 mt-3 lg:mt-6 overflow-x-auto scrollbar-none">
+          <div
+            class="flex flex-col justify-between w-50 h-65 lg:w-100 lg:h-115 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Data Analyst
+              </h4>
+              <p class="font-bold text-2xl lg:text-5xl my-1 lg:my-4">
+                Rp1.199.000
+              </p>
+            </div>
+
+            <ul
+              class="flex flex-col gap-1 lg:gap-2 text-xs lg:text-base text-balance list-inside"
+            >
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Kurikulum berbasis industri
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Proyek untuk portofolio
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Career building
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Akses ke TemuDataku Community
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Akses ke seluruh materi dan rekaman selama kelas
+              </li>
+            </ul>
+
+            <div
+              class="bg-(--primary) py-1.5 lg:py-3 px-2 lg:px-4 mt-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Daftar
+              </h2>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between w-50 h-65 lg:w-100 lg:h-115 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Data Analyst
+              </h4>
+              <p class="font-bold text-2xl lg:text-5xl my-1 lg:my-4">
+                Rp1.199.000
+              </p>
+            </div>
+
+            <ul
+              class="flex flex-col gap-1 lg:gap-2 text-xs lg:text-base text-balance list-inside"
+            >
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Kurikulum berbasis industri
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Proyek untuk portofolio
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Career building
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Akses ke TemuDataku Community
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Akses ke seluruh materi dan rekaman selama kelas
+              </li>
+            </ul>
+
+            <div
+              class="bg-(--primary) py-1.5 lg:py-3 px-2 lg:px-4 mt-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-base lg:text-lg text-center"
+              >
+                Daftar
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between w-50 h-65 lg:w-100 lg:h-115 shadow-md p-4 lg:p-8 rounded-xl bg-white"
+          >
+            <div>
+              <h4 class="text-xs lg:text-xl font-semibold text-(--primary)">
+                Data Scientist for Beginner
+              </h4>
+              <p class="font-bold text-2xl lg:text-5xl my-1 lg:my-4">
+                Rp449.000
+              </p>
+            </div>
+
+            <ul
+              class="flex flex-col gap-1 lg:gap-2 text-xs lg:text-base text-balance list-inside"
+            >
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Kurikulum berbasis industri
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Proyek untuk portofolio
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Career building
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Akses ke TemuDataku Community
+              </li>
+              <li
+                class="relative pl-2 lg:pl-4 before:content-['•'] before:absolute before:left-0 before:text-[--primary] truncate"
+              >
+                Akses ke seluruh materi dan rekaman selama kelas
+              </li>
+            </ul>
+
+            <div
+              class="bg-(--primary) py-3 px-4 mt-4 cursor-pointer hover:opacity-80 transition-all duration-200 rounded-md"
+            >
+              <h2
+                class="uppercase font-semibold text-white text-lg text-center"
+              >
+                Daftar
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const logoutButton = document.getElementById("logout-button");
+
+      logoutButton.addEventListener("click", () => {
+        localStorage.removeItem("userData");
+        location.replace("homePage.html");
+      });
+    </script>
+  </body>
+</html>

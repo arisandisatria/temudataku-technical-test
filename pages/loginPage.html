@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --primary: #25784c;
+      }
+    </style>
+  </head>
+
+  <!-- 2. Login Page TemuDataku (simulasi login, bebas password apa saja). -->
+  <body class="bg-gray-100 bg-gray-100">
+    <main class="flex justify-between items-center">
+      <section class="relative w-[50%] hidden lg:block">
+        <figure>
+          <img
+            src="../assets/hero-img.jpg"
+            alt="Hero Image"
+            class="w-full h-screen object-cover filter brightness-50"
+          />
+        </figure>
+        <h2 class="w-[80%] absolute bottom-30 left-10 text-4xl text-white">
+          Belajar lebih efektif & latihan langsung dari ahlinya hanya di
+          <span class="text-6xl font-bold [-webkit-text-stroke:3.5px_#25784c]"
+            >TemuDataku!</span
+          >
+        </h2>
+      </section>
+      <section
+        class="w-full h-screen px-4 lg:px-0 lg:w-[50%] flex justify-center items-center"
+      >
+        <div
+          class="relative flex flex-col gap-5 justify-between w-120 h-fit bg-white rounded-xl px-5 py-5 lg:px-15 lg:py-10"
+        >
+          <form id="form-submit">
+            <div>
+              <h2 class="text-3xl lg:text-4xl font-semibold">Login</h2>
+              <p class="text-lg lg:text-xl mt-2 lg:mt-4">
+                Silahkan login untuk melihat katalog
+              </p>
+            </div>
+
+            <div class="flex flex-col mt-5 mb-2">
+              <div class="flex flex-col gap-4">
+                <div class="w-full">
+                  <input
+                    id="email-input"
+                    type="text"
+                    placeholder="e-mail"
+                    class="w-full py-2 px-2 border-b-2 border-slate-200 text-lg placeholder:text-lg lg:text-xl lg:placeholder:text-xl focus:outline-none"
+                    required
+                  />
+                </div>
+
+                <div class="w-full">
+                  <input
+                    id="password-input"
+                    type="password"
+                    placeholder="password"
+                    class="w-full py-2 px-2 border-b-2 border-slate-200 text-lg placeholder:text-lg lg:text-xl lg:placeholder:text-xl focus:outline-none"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="uppercase font-semibold text-lg lg:text-xl text-white mt-8 py-2.5 lg:py-3 w-full bg-(--primary) rounded-md text-center cursor-pointer hover:opacity-80 transition-all duration-200"
+              >
+                LOGIN
+              </button>
+            </div>
+            <a
+              href="homePage.html"
+              class="hover:underline hover:underline-(--primary) text-sm text-(--primary) w-fit"
+              >&larr; Kembali ke Home</a
+            >
+          </form>
+          <p class="absolute -bottom-10 lg:-bottom-6 left-4 text-xs italic">
+            *Bisa langsung login tanpa register. Username dan password bebas
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const formSubmit = document.getElementById("form-submit");
+      const emailInput = document.getElementById("email-input");
+      const passwordInput = document.getElementById("password-input");
+
+      let isFormValid = true;
+
+      emailInput.addEventListener("input", () => {
+        if (emailInput.value !== "") {
+          emailInput.classList.add("border-slate-200");
+          emailInput.classList.remove(
+            "border-red-600",
+            "placeholder:text-red-600"
+          );
+          isFormValid = true;
+        }
+      });
+
+      passwordInput.addEventListener("input", () => {
+        if (passwordInput.value !== "") {
+          passwordInput.classList.add("border-slate-200");
+          passwordInput.classList.remove(
+            "border-red-600",
+            "placeholder:text-red-600"
+          );
+          isFormValid = true;
+        }
+      });
+
+      formSubmit.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (emailInput.value.trim() == "") {
+          emailInput.classList.remove("border-slate-200");
+          emailInput.classList.add(
+            "border-red-600",
+            "placeholder:text-red-600"
+          );
+          isFormValid = false;
+        }
+
+        if (passwordInput.value.trim() == "") {
+          passwordInput.classList.remove("border-slate-200");
+          passwordInput.classList.add(
+            "border-red-600",
+            "placeholder:text-red-600"
+          );
+          isFormValid = false;
+        }
+
+        if (isFormValid) {
+          const userData = {
+            email: emailInput.value.trim(),
+            password: passwordInput.value.trim(),
+          };
+          localStorage.setItem("userData", JSON.stringify(userData));
+          location.replace("catalogPage.html");
+        }
+      });
+    </script>
+  </body>
+</html>
