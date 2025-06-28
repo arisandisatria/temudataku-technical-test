@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="assets/logo.webp" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/tailwindcss">
       @theme {
@@ -13,12 +14,15 @@
     </style>
   </head>
 
-  <!-- 1. Home Page TemuDataku (deskripsi singkat & CTA login). -->
   <body class="scrollbar bg-gray-100">
     <header class="flex justify-around items-center">
-      <img src="assets/logo.webp" alt="Logo TemuDataku" class="w-40" />
+      <img
+        src="assets/logo.webp"
+        alt="Logo TemuDataku"
+        class="w-20 px-2 lg:px-0 lg:w-40"
+      />
 
-      <nav>
+      <nav class="hidden lg:block">
         <ul class="flex gap-10 font-semibold uppercase text-lg">
           <li>
             <a
@@ -40,26 +44,30 @@
 
       <button
         id="login-button"
-        class="px-5 py-3 uppercase font-semibold rounded-md text-lg text-white cursor-pointer hover:opacity-80 transition-all duration-200"
+        class="px-2 py-2 lg:px-5 lg:py-3 uppercase font-semibold rounded-sm lg:rounded-md text-xs lg:text-lg text-white cursor-pointer hover:opacity-80 transition-all duration-200"
       >
         LOGIN
       </button>
     </header>
 
-    <main class="flex flex-col gap-20 text-center items-center mb-20">
+    <main
+      class="flex flex-col gap-10 lg:gap-20 text-center items-center mb-10 lg:mb-20"
+    >
       <section
-        class="flex flex-row gap-20 h-150 w-full justify-center items-center"
+        class="flex flex-col-reverse lg:flex-row px-5 lg:px-0 gap-5 lg:gap-20 h-100 lg:h-150 w-full justify-center items-center"
       >
-        <div class="flex flex-col gap-15 text-start w-[40%]">
-          <div class="flex flex-col gap-8">
-            <h3 class="text-xl font-semibold">
+        <div
+          class="flex flex-col gap-5 lg:gap-15 text-center items-center lg:items-start lg:text-start w-full lg:w-[40%]"
+        >
+          <div class="flex flex-col gap-6 lg:gap-8">
+            <h3 class="text-sm lg:text-xl font-semibold">
               Belajar Data Science Nggak Pernah Se-ngebosenin Gini
             </h3>
-            <h1 class="text-6xl font-semibold">
+            <h1 class="text-3xl lg:text-6xl font-semibold">
               Yuk Dibarengin Mentor dari
               <span class="text-(--primary)">TemuDataku!</span>
             </h1>
-            <p class="">
+            <p class="text-xs lg:text-base">
               Dapatkan bimbingan dari mentor untuk menjawab keraguan mu dalam
               belajar data science. Khusus untuk kamu yang belajar otodidak,
               kami memberikan akses 1 on 1 maupun kelompok untuk mentoring dan
@@ -67,32 +75,32 @@
             </p>
           </div>
 
-          <div class="flex gap-4 items-center text-start">
+          <div class="flex gap-4 items-center text-start mt-3 lg:mt-0">
             <button
               id="catalog-button"
               type="button"
-              class="px-5 py-3 bg-white outline-3 outline-(--primary) uppercase font-semibold shadow-md rounded-md text-lg text-(--primary) cursor-pointer hover:scale-[1.1] transition-all duration-200"
+              class="px-3 lg:px-5 py-3 bg-white outline-3 outline-(--primary) uppercase font-semibold shadow-sm lg:shadow-md rounded-sm lg:rounded-md text-xs lg:text-lg text-(--primary) cursor-pointer hover:scale-[1.1] transition-all duration-200"
             >
               Lihat Katalog
             </button>
           </div>
         </div>
 
-        <figure class="w-[45%]">
+        <figure class="w-full lg:w-[45%]">
           <img
             src="assets/hero-img.jpg"
             alt="Hero Image"
-            class="rounded-xl shadow-md"
+            class="hidden lg:block rounded-xl shadow-md"
           />
         </figure>
       </section>
 
-      <section>
+      <section class="px-5 lg:px-0">
         <div>
-          <h1 class="text-4xl font-semibold text-(--primary)">
+          <h1 class="text-2xl lg:text-4xl font-semibold text-(--primary)">
             Mentor Profesional
           </h1>
-          <p class="text-lg mt-2">
+          <p class="text-xs lg:text-lg mt-2">
             Dibimbing oleh profesional yang merupakan lulusan dari program
             talenta digital elit, Bangkit by Google, GoTo, & Traveloka.
           </p>
@@ -101,30 +109,32 @@
         <img
           src="assets/bangkit-logo.webp"
           alt="Bangkit Logo"
-          class="w-120 mx-auto mt-10"
+          class="w-80 lg:w-120 mx-auto lg:mt-10"
         />
       </section>
 
       <section
-        class="flex flex-col w-full px-4 lg:px-80 py-10 relative before:absolute before:top-40 before:bottom-40 before:left-1/2 before:-translate-x-1/2 before:h-[85%] before:w-0.5 before:bg-gray-200"
+        class="flex flex-col w-full px-4 lg:px-80 lg:py-10 relative lg:before:absolute lg:before:top-40 lg:before:bottom-40 lg:before:left-1/2 lg:before:-translate-x-1/2 lg:before:h-[85%] lg:before:w-0.5 lg:before:bg-gray-200"
       >
-        <h1 class="text-4xl font-semibold text-(--primary)">
+        <h1 class="text-2xl lg:text-4xl font-semibold text-(--primary)">
           Kenapa Harus Kami?
         </h1>
 
         <div
-          class="flex justify-start items-center gap-5 text-start bg-white shadow-md w-[45%] h-fit rounded-xl p-4 mt-20 relative after:absolute after:top-1/2 after:-right-10 after:-translate-y-1/2 after:w-4 after:h-4 after:bg-white after:border-4 after:border-gray-300 after:rounded-full"
+          class="flex flex-col lg:flex-row justify-start items-center gap-2 lg:gap-5 text-start bg-white shadow-md w-full lg:w-[45%] h-fit rounded-xl p-4 mt-6 lg:mt-20 lg:relative after:absolute after:top-1/2 after:-right-10 after:-translate-y-1/2 after:w-4 after:h-4 after:bg-white after:border-4 after:border-gray-300 after:rounded-full"
         >
           <img
             src="assets/mentoring-img.webp"
             alt="Mentoring Image"
-            class="w-[45%] rounded-xl"
+            class="w-full h-40 object-cover lg:w-[45%] lg:h-full rounded-xl"
           />
           <div class="flex flex-col gap-1">
-            <h3 class="text-3xl font-bold text-(--primary) uppercase">
+            <h3
+              class="text-center lg:text-start text-xl lg:text-3xl font-bold text-(--primary) uppercase"
+            >
               Mentoring
             </h3>
-            <p class="text-lg">
+            <p class="text-xs lg:text-lg">
               Kamu akan mendapatkan sesi mentoring yang kamu mau dengan
               permasalahan yang kamu alami saat ini. Kamu dapat mengajukan
               mentoring untuk bidang Data Analyst, Data Scientist, dan Machine
@@ -134,13 +144,15 @@
         </div>
 
         <div
-          class="flex justify-start items-center gap-5 text-end bg-white shadow-md w-[45%] h-fit rounded-xl p-4 mt-10 self-end relative after:absolute after:top-1/2 after:-left-10 after:-translate-y-1/2 after:w-4 after:h-4 after:bg-white after:border-4 after:border-gray-300 after:rounded-full"
+          class="flex flex-col-reverse lg:flex-row justify-start items-center gap-5 lg:text-end bg-white shadow-md w-full lg:w-[45%] h-fit rounded-xl p-4 mt-6 lg:mt-20 lg:self-end lg:relative after:absolute after:top-1/2 after:-left-10 after:-translate-y-1/2 after:w-4 after:h-4 after:bg-white after:border-4 after:border-gray-300 after:rounded-full"
         >
           <div class="flex flex-col gap-1">
-            <h3 class="text-3xl font-bold text-(--primary) uppercase">
+            <h3
+              class="text-center lg:text-end text-xl lg:text-3xl font-bold text-(--primary) uppercase"
+            >
               Practice
             </h3>
-            <p class="text-lg">
+            <p class="text-xs lg:text-lg">
               Pada practice ini kamu akan mendapatkan pengalaman praktik
               mengolah data secara langsung dengan beragam studi kasus dan data
               yang disediakan
@@ -149,23 +161,25 @@
           <img
             src="assets/mentoring-img.webp"
             alt="Mentoring Image"
-            class="w-[45%] rounded-xl"
+            class="w-full h-40 object-cover lg:w-[45%] lg:h-full rounded-xl"
           />
         </div>
 
         <div
-          class="flex justify-start items-center gap-5 text-start bg-white shadow-md w-[45%] h-fit rounded-xl p-4 mt-10 relative after:absolute after:top-1/2 after:-right-10 after:-translate-y-1/2 after:w-4 after:h-4 after:bg-white after:border-4 after:border-gray-300 after:rounded-full"
+          class="flex flex-col lg:flex-row justify-start items-center gap-5 text-start bg-white shadow-md w-full lg:w-[45%] h-fit rounded-xl p-4 mt-6 lg:mt-20 lg:relative after:absolute after:top-1/2 after:-right-10 after:-translate-y-1/2 after:w-4 after:h-4 after:bg-white after:border-4 after:border-gray-300 after:rounded-full"
         >
           <img
             src="assets/mentoring-img.webp"
             alt="Mentoring Image"
-            class="w-[45%] rounded-xl"
+            class="w-full h-40 object-cover lg:w-[45%] lg:h-full rounded-xl"
           />
           <div class="flex flex-col gap-1">
-            <h3 class="text-3xl font-bold text-(--primary) uppercase">
+            <h3
+              class="text-center lg:text-start text-xl lg:text-3xl font-bold text-(--primary) uppercase"
+            >
               Bootcamp
             </h3>
-            <p class="text-lg">
+            <p class="text-xs lg:text-lg">
               Kamu akan mendapatkan kurikulum yang berbasis industri dan tidak
               hanya teori saja, kamu juga akan mendapatkan seluruh akses materi
               dan akses rekaman selama kelas bootcamp. Tidak hanya itu untuk
@@ -176,17 +190,17 @@
         </div>
       </section>
 
-      <section class="mb-20">
-        <h1 class="text-7xl font-semibold text-(--primary)">
+      <section class="mb-20 mt-10 px-5 lg:px-0">
+        <h1 class="text-4xl lg:text-7xl font-semibold text-(--primary)">
           Tunggu Apa Lagi???
         </h1>
-        <p class="text-xl my-8">
+        <p class="text-base lg:text-xl my-6 lg:my-8">
           Daftar sekarang juga dan jadilah ahli data sekarang juga!
         </p>
         <button
           id="catalog-button"
           type="button"
-          class="px-5 py-3 bg-white outline-3 outline-(--primary) uppercase font-semibold shadow-md rounded-md text-lg text-(--primary) cursor-pointer hover:scale-[1.1] transition-all duration-200"
+          class="px-3 lg:px-5 py-3 mt-2 lg:mt-5 bg-white animate-bounce outline-3 outline-(--primary) uppercase font-semibold shadow-md rounded-md text-base lg:text-lg text-(--primary) cursor-pointer hover:scale-[1.1] transition-all duration-200"
         >
           Klik Disini
         </button>
